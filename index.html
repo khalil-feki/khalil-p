@@ -49,6 +49,16 @@
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	          <li class="nav-item nav-theme-toggle">
+	            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark mode">
+	              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+	            </button>
+	          </li>
+	          <li class="nav-item lang-switch">
+	            <button class="lang-btn active" data-lang="en" type="button">EN</button>
+	            <button class="lang-btn" data-lang="fr" type="button">FR</button>
+	            <button class="lang-btn" data-lang="ar" type="button">AR</button>
+	          </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -63,10 +73,11 @@
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>khalil feki</span></h1>
-			            <h2 class="mb-4">A Freelance Web Designer</h2>
+		          	<div class="text hero-shell">
+		          		<span class="subheading" data-i18n="hero_greet">Hello, I’m</span>
+		            <h1 class="mb-4 mt-3" data-i18n="hero_name">Khalil <span>Feki</span></h1>
+		            <h2 class="mb-4" data-i18n="hero_tag">Engineering student • Web & App developer • Creative problem solver</h2>
+			            <p class="hero-pills"><span>Java</span><span>PHP</span><span>Web Design</span><span>ERP</span></p>
 			            <p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
@@ -82,9 +93,11 @@
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '50%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm a <span>web designer</span> based in tunisia</h1>
+		          	<div class="text hero-shell">
+		          		<span class="subheading" data-i18n="hero_path">Engineering path</span>
+		            <h1 class="mb-4 mt-3" data-i18n="hero_title">Studying <span>Engineering</span> at Esprit School of Engineering</h1>
+		            <h2 class="mb-4" data-i18n="hero_text">Building modern projects, learning fast, and turning ideas into real digital experiences.</h2>
+		            <p class="hero-pills"><span>UI/UX</span><span>Full stack</span><span>Scrum</span><span>Innovation</span></p>
 			            <p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
@@ -107,16 +120,16 @@
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">About</h1>
-		            <h2 class="mb-4">About Me</h2>
+		          	
+		            <h2 class="mb-4" data-i18n="about_title">About Me</h2>
 		            <p></p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
-		            	<li class="d-flex"><span>Name:</span> <span>khalil feki</span></li>
-		            	<li class="d-flex"><span>Date of birth:</span> <span>june , 10 ,2002</span></li>
-		            	<li class="d-flex"><span>Address:</span> <span>boumhal ben arous </span></li>
-		            	<li class="d-flex"><span>Zip code:</span> <span>1000</span></li>
-		            	<li class="d-flex"><span>Email:</span> <span>khalilfeki8@gmail.com</span></li>
-		            	<li class="d-flex"><span>Phone: </span> <span>+216 27-808-034</span></li>
+		            	<li class="d-flex"><span data-i18n="about_name_label">Name:</span> <span data-i18n="about_name_value">khalil feki</span></li>
+		            	<li class="d-flex"><span data-i18n="about_birth_label">Date of birth:</span> <span data-i18n="about_birth_value">june , 10 ,2002</span></li>
+		            	<li class="d-flex"><span data-i18n="about_address_label">Address:</span> <span data-i18n="about_address_value">boumhal ben arous</span></li>
+		            	<li class="d-flex"><span data-i18n="about_zip_label">Zip code:</span> <span data-i18n="about_zip_value">1000</span></li>
+		            	<li class="d-flex"><span data-i18n="about_email_label">Email:</span> <span>khalilfeki8@gmail.com</span></li>
+		            	<li class="d-flex"><span data-i18n="about_phone_label">Phone:</span> <span>+216 27-808-034</span></li>
 		            </ul>
 		          </div>
 		        </div>
@@ -124,9 +137,9 @@
               <div class="text">
               	<p class="mb-4">
 	                <span class="number" data-number="12">0</span>
-	                <span>Project complete</span>
+	                <span data-i18n="about_projects">Project complete</span>
                 </p>
-                <p><a href="feki-khalil_cv.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                <p><a href="feki-khalil_cv.pdf" class="btn btn-primary py-3 px-3" data-i18n="about_cv">Download CV</a></p>
               </div>
 	          </div>
 	        </div>
@@ -138,46 +151,73 @@
 	<div class="container">
 		<div class="row justify-content-center pb-5">
 			<div class="col-md-10 heading-section text-center ftco-animate">
-				<h1 class="big big-2">Resume</h1>
-				<h2 class="mb-4">Resume</h2>
-				<p>Dedicated second-year college student with a passion for learning and a growing set of skills. Seeking opportunities to apply classroom knowledge in real-world settings.</p>
+				
+				<h2 class="mb-4" data-i18n="resume_title">Resume</h2>
+				
 			</div>
 		</div>
-		<div class="row">
+		<div class="row resume-grid">
 			<div class="col-md-6">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">2024->Present</span>
-					<h2>Bachelor's Degree in business computing</h2>
-					<span class="position">esprit school of business</span>
-					<p class="mt-4">Currently pursuing a degree in  business computing  .</p>
-				</div>
-				<div class="resume-wrap ftco-animate">
-					<span class="date">2021->2022</span>
-					<h2>High School Diploma</h2>
-					<span class="position">Essalem Boumhel City High School</span>
-					<p class="mt-4">Graduated with honors.</p>
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.05s;">
+					<span class="resume-tag" data-i18n="resume_education_tag">Education</span>
+					<span class="date" data-i18n="resume_education_date">2024 → Present</span>
+					<h2 data-i18n="resume_education_title">Engineering Student</h2>
+					<span class="position" data-i18n="resume_education_place">Esprit School of Engineering</span>
+					<p class="mt-4" data-i18n="resume_education_desc">Currently studying engineering with focus on digital systems, software development, and applied technology.</p>
 				</div>
 			</div>
-	
 			<div class="col-md-6">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">06-2023 -> 09-2023</span>
-					<h2> Internship</h2>
-					<span class="position">GAT ASSURANCES</span>
-					<p class="mt-4"> Provided general administrative support,including scheduling
-						client meetings, preparing reports, </p>
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.12s;">
+					<span class="resume-tag" data-i18n="resume_academic_tag">Academic</span>
+					<span class="date" data-i18n="resume_academic_date">2021 → 2022</span>
+					<h2 data-i18n="resume_academic_title">High School Diploma</h2>
+					<span class="position" data-i18n="resume_academic_place">Essalem Boumhel City High School</span>
+					<p class="mt-4" data-i18n="resume_academic_desc">Graduated with strong academic performance and a solid base for further studies.</p>
 				</div>
-				<div class="resume-wrap ftco-animate">
-					<span class="date">2021->2025</span>
-					<h2>Customer Support</h2>
-					<span class="position">Boumhal Youth Center</span>
-					<p class="mt-4">Handled inquiries and resolved issues.</p>
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.18s;">
+					<span class="resume-tag" data-i18n="resume_intern_tag">Internship</span>
+					<span class="date" data-i18n="resume_intern_date">06/2023 → 09/2023</span>
+					<h2 data-i18n="resume_intern_title">Administrative Internship</h2>
+					<span class="position" data-i18n="resume_intern_place">GAT Assurances</span>
+					<p class="mt-4" data-i18n="resume_intern_desc">Supported day-to-day administration, client coordination, and reporting tasks in a professional environment.</p>
 				</div>
-				<div class="resume-wrap ftco-animate">
-					<span class="date">2026</span>
-					<h2>Scrum Fundamentals Certified</h2>
-					<span class="position">ScrumStudy</span>
-					<p class="mt-4">Certification covering agile principles, Scrum roles, events, and project delivery practices.</p>
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.24s;">
+					<span class="resume-tag" data-i18n="resume_pfe1_tag">PFE</span>
+					<span class="date" data-i18n="resume_pfe1_date">2025 · 6 months</span>
+					<h2 data-i18n="resume_pfe1_title">E-commerce Web Site Project</h2>
+					<span class="position" data-i18n="resume_pfe1_place">Responsive Storefront Development</span>
+					<p class="mt-4" data-i18n="resume_pfe1_desc">Built and improved a responsive e-commerce website with product flow, interface polish, and deployment-ready web development work.</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.30s;">
+					<span class="resume-tag" data-i18n="resume_pfe2_tag">PFE</span>
+					<span class="date" data-i18n="resume_pfe2_date">2025 · 6 months</span>
+					<h2 data-i18n="resume_pfe2_title">ERP Dolibarr Project</h2>
+					<span class="position" data-i18n="resume_pfe2_place">Business Workflow & Data Management</span>
+					<p class="mt-4" data-i18n="resume_pfe2_desc">Contributed to an ERP project using Dolibarr, improving operational workflows, documentation, and business process handling.</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.36s;">
+					<span class="resume-tag" data-i18n="resume_support_tag">Experience</span>
+					<span class="date" data-i18n="resume_support_date">2021 → 2025</span>
+					<h2 data-i18n="resume_support_title">Customer Support</h2>
+					<span class="position" data-i18n="resume_support_place">Boumhal Youth Center</span>
+					<p class="mt-4" data-i18n="resume_support_desc">Handled inquiries, supported users, and improved communication and problem-solving in a community setting.</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap resume-card ftco-animate" style="animation-delay: 0.42s;">
+					<span class="resume-tag" data-i18n="resume_cert_tag">Certification</span>
+					<span class="date" data-i18n="resume_cert_date">2026</span>
+					<h2 data-i18n="resume_cert_title">Scrum Fundamentals Certified</h2>
+					<span class="position" data-i18n="resume_cert_place">ScrumStudy</span>
+					<p class="mt-4" data-i18n="resume_cert_desc">Certification covering Agile principles, Scrum roles, events, and effective project delivery practices.</p>
 				</div>
 			</div>
 		
@@ -195,8 +235,8 @@
     	<div class="container">
     		<div class="row justify-content-center py-5 mt-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Services</h1>
-            <h2 class="mb-4">Services</h2>
+          	
+            <h2 class="mb-4" data-i18n="services_title">Services</h2>
             <p></p>
           </div>
         </div>
@@ -204,38 +244,38 @@
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="#projects-section" class="services-1">
 							<span class="icon"><i class="flaticon-analysis"></i></span>
-							<div class="desc"><h3 class="mb-5">Mobile App Design</h3><p>Creative interfaces for art, gallery, and digital experiences.</p></div>
+							<div class="desc"><h3 class="mb-5" data-i18n="service_mobile_title">Mobile App Design</h3><p data-i18n="service_mobile_text">Creative interfaces for art, gallery, and digital experiences.</p></div>
 						</a>
 					</div>
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="#projects-section" class="services-1">
 							<span class="icon"><i class="flaticon-flasks"></i></span>
-							<div class="desc"><h3 class="mb-5">Network Architecture</h3><p>Distributed systems, virtualization, NFS, monitoring, and MySQL deployment.</p></div>
+							<div class="desc"><h3 class="mb-5" data-i18n="service_network_title">Network Architecture</h3><p data-i18n="service_network_text">Distributed systems, virtualization, NFS, monitoring, and MySQL deployment.</p></div>
 						</a>
 					</div>
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="https://github.com/khalil-feki/Virtual-museum" target="_blank" rel="noopener noreferrer" class="services-1">
 							<span class="icon"><i class="flaticon-ideas"></i></span>
-							<div class="desc"><h3 class="mb-5">3D Web Experiences</h3><p>Immersive ecosystem and smart-city concepts delivered through modern web interfaces.</p></div>
+							<div class="desc"><h3 class="mb-5" data-i18n="service_3d_title">3D Web Experiences</h3><p data-i18n="service_3d_text">Immersive ecosystem and smart-city concepts delivered through modern web interfaces.</p></div>
 						</a>
 					</div>
 
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="https://www.scrumstudy.com/" target="_blank" rel="noopener noreferrer" class="services-1">
 							<span class="icon"><i class="flaticon-analysis"></i></span>
-							<div class="desc"><h3 class="mb-5">Scrum & Agile</h3><p>Certified Scrum Fundamentals understanding for planning, collaboration, and delivery.</p></div>
+							<div class="desc"><h3 class="mb-5" data-i18n="service_scrum_title">Scrum & Agile</h3><p data-i18n="service_scrum_text">Certified Scrum Fundamentals understanding for planning, collaboration, and delivery.</p></div>
 						</a>
 					</div>
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="#contact-section" class="services-1">
 							<span class="icon"><i class="flaticon-flasks"></i></span>
-							<div class="desc"><h3 class="mb-5">Collaboration</h3><p>Team-first delivery with clear documentation, communication, and project support.</p></div>
+							<div class="desc"><h3 class="mb-5" data-i18n="service_collab_title">Collaboration</h3><p data-i18n="service_collab_text">Team-first delivery with clear documentation, communication, and project support.</p></div>
 						</a>
 					</div>
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="#projects-section" class="services-1">
 							<span class="icon"><i class="flaticon-ideas"></i></span>
-							<div class="desc"><h3 class="mb-5">Full-Stack Portfolio</h3><p>HTML, Java, PHP, and web UI work across school, personal, and professional projects.</p></div>
+							<div class="desc"><h3 class="mb-5" data-i18n="service_stack_title">Full-Stack Portfolio</h3><p data-i18n="service_stack_text">HTML, Java, PHP, and web UI work across school, personal, and professional projects.</p></div>
 						</a>
 					</div>
 				</div>
@@ -247,9 +287,9 @@
         <div class="container">
             <div class="row justify-content-center pb-5">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Skills</h1>
-                    <h2 class="mb-4">My Skills</h2>
-                    <p>Showcasing my expertise in web development technologies</p>
+                    
+                    <h2 class="mb-4" data-i18n="skills_title">My Skills</h2>
+                    <p data-i18n="skills_text">Showcasing my expertise in web development technologies</p>
                 </div>
             </div>
             <div class="row">
@@ -548,8 +588,8 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
+           
+            <h2 class="mb-4" data-i18n="contact_title">Contact Me</h2>
             <p></p>
           </div>
         </div>
@@ -560,8 +600,8 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
           		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>boumhal ben arous</p>
+          		<h3 class="mb-4" data-i18n="contact_address_label">Address</h3>
+	            <p data-i18n="contact_address_value">boumhal ben arous</p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -569,7 +609,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
-          		<h3 class="mb-4">Contact Number</h3>
+          		<h3 class="mb-4" data-i18n="contact_phone_label">Contact Number</h3>
 	            <p><a href="tel://1234567920">+216 27-808-034</a></p>
 	          </div>
           </div>
@@ -578,7 +618,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-paper-plane"></span>
           		</div>
-          		<h3 class="mb-4">Email Address</h3>
+          		<h3 class="mb-4" data-i18n="contact_email_label">Email Address</h3>
 	            <p><a href="mailto:khalilfeki8@gmail.com">khalilfeki8@gmail.com</a></p>
 	          </div>
           </div>
@@ -587,7 +627,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-globe"></span>
           		</div>
-          		<h3 class="mb-4">Website</h3>
+          		<h3 class="mb-4" data-i18n="contact_site_label">Website</h3>
 	            <p><a href="https://github.com/khalil-feki" target="_blank" rel="noopener noreferrer">github.com/khalil-feki</a></p>
 	          </div>
           </div>
@@ -597,21 +637,21 @@
           <div class="col-md-6 order-md-last d-flex">
             <form action="https://formsubmit.co/ajax/khalilfeki8@gmail.com" method="POST" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" data-i18n="contact_form_name" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                <input type="email" name="email" class="form-control" data-i18n="contact_form_email" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                <input type="text" name="subject" class="form-control" data-i18n="contact_form_subject" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" data-i18n="contact_form_message" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://khalil-feki.github.io/">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" data-i18n="contact_form_send">
               </div>
             </form>
           
@@ -714,6 +754,116 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const saved = localStorage.getItem('portfolio-theme');
+      const preferred = saved || 'dark';
+      root.setAttribute('data-theme', preferred);
+      function updateIcon(theme) {
+        if (!toggle) return;
+        const icon = toggle.querySelector('i');
+        if (icon) icon.className = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+      }
+      updateIcon(preferred);
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          localStorage.setItem('portfolio-theme', next);
+          updateIcon(next);
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      const translations = {
+        en: {
+          nav_home: 'Home', nav_about: 'About', nav_resume: 'Resume', nav_services: 'Services', nav_skills: 'Skills', nav_projects: 'Projects', nav_blog: 'My Blog', nav_contact: 'Contact',
+          hero_greet: 'Hello, I’m', hero_name: 'Khalil Feki', hero_tag: 'Engineering student • Web & App developer • Creative problem solver',
+          hero_path: 'Engineering path', hero_title: 'Studying Engineering at Esprit School of Engineering', hero_text: 'Building modern projects, learning fast, and turning ideas into real digital experiences.',
+          about_big: 'About', about_title: 'About Me', about_name_label: 'Name:', about_name_value: 'Khalil Feki', about_birth_label: 'Date of birth:', about_birth_value: 'June 10, 2002', about_address_label: 'Address:', about_address_value: 'Boumhal Ben Arous', about_zip_label: 'Zip code:', about_zip_value: '1000', about_email_label: 'Email:', about_phone_label: 'Phone:', about_projects: 'Project complete', about_cv: 'Download CV',
+          resume_big: 'Resume', resume_title: 'Resume', resume_education_tag: 'Education', resume_education_date: '2024 → Present', resume_education_title: 'Engineering Student', resume_education_place: 'Esprit School of Engineering', resume_education_desc: 'Currently studying engineering with focus on digital systems, software development, and applied technology.',
+          resume_academic_tag: 'Academic', resume_academic_date: '2021 → 2022', resume_academic_title: 'High School Diploma', resume_academic_place: 'Essalem Boumhel City High School', resume_academic_desc: 'Graduated with strong academic performance and a solid base for further studies.',
+          resume_intern_tag: 'Internship', resume_intern_date: '06/2023 → 09/2023', resume_intern_title: 'Administrative Internship', resume_intern_place: 'GAT Assurances', resume_intern_desc: 'Supported day-to-day administration, client coordination, and reporting tasks in a professional environment.',
+          resume_pfe1_tag: 'PFE', resume_pfe1_date: '2025 · 6 months', resume_pfe1_title: 'E-commerce Web Site Project', resume_pfe1_place: 'Responsive Storefront Development', resume_pfe1_desc: 'Built and improved a responsive e-commerce website with product flow, interface polish, and deployment-ready web development work.',
+          resume_pfe2_tag: 'PFE', resume_pfe2_date: '2025 · 6 months', resume_pfe2_title: 'ERP Dolibarr Project', resume_pfe2_place: 'Business Workflow & Data Management', resume_pfe2_desc: 'Contributed to an ERP project using Dolibarr, improving operational workflows, documentation, and business process handling.',
+          resume_support_tag: 'Experience', resume_support_date: '2021 → 2025', resume_support_title: 'Customer Support', resume_support_place: 'Boumhal Youth Center', resume_support_desc: 'Handled inquiries, supported users, and improved communication and problem-solving in a community setting.',
+          resume_cert_tag: 'Certification', resume_cert_date: '2026', resume_cert_title: 'Scrum Fundamentals Certified', resume_cert_place: 'ScrumStudy', resume_cert_desc: 'Certification covering Agile principles, Scrum roles, events, and effective project delivery practices.',
+          services_big: 'Services', services_title: 'Services', service_mobile_title: 'Mobile App Design', service_mobile_text: 'Creative interfaces for art, gallery, and digital experiences.', service_network_title: 'Network Architecture', service_network_text: 'Distributed systems, virtualization, NFS, monitoring, and MySQL deployment.', service_3d_title: '3D Web Experiences', service_3d_text: 'Immersive ecosystem and smart-city concepts delivered through modern web interfaces.', service_scrum_title: 'Scrum & Agile', service_scrum_text: 'Certified Scrum Fundamentals understanding for planning, collaboration, and delivery.', service_collab_title: 'Collaboration', service_collab_text: 'Team-first delivery with clear documentation, communication, and project support.', service_stack_title: 'Full-Stack Portfolio', service_stack_text: 'HTML, Java, PHP, and web UI work across school, personal, and professional projects.',
+          skills_big: 'Skills', skills_title: 'My Skills', skills_text: 'Showcasing my expertise in web development technologies',
+          projects_big: 'Projects', projects_title: 'Featured GitHub Projects', projects_text: 'A polished showcase of my best repositories across HTML, Java, and PHP.',
+          contact_big: 'Contact', contact_title: 'Contact Me', contact_address_label: 'Address', contact_address_value: 'Boumhal Ben Arous', contact_phone_label: 'Contact Number', contact_email_label: 'Email Address', contact_site_label: 'Website', contact_form_name: 'Your Name', contact_form_email: 'Your Email', contact_form_subject: 'Subject', contact_form_message: 'Message', contact_form_send: 'Send Message'
+        },
+        fr: {
+          nav_home: 'Accueil', nav_about: 'À propos', nav_resume: 'CV', nav_services: 'Services', nav_skills: 'Compétences', nav_projects: 'Projets', nav_blog: 'Blog', nav_contact: 'Contact',
+          hero_greet: 'Bonjour, je suis', hero_name: 'Khalil Feki', hero_tag: 'Étudiant en ingénierie • Développeur Web & App • Résolveur créatif',
+          hero_path: 'Parcours ingénierie', hero_title: 'Études en ingénierie à l’Esprit School of Engineering', hero_text: 'Créer des projets modernes, apprendre vite et transformer les idées en expériences numériques.',
+          about_big: 'À propos', about_title: 'À propos de moi', about_name_label: 'Nom :', about_name_value: 'Khalil Feki', about_birth_label: 'Date de naissance :', about_birth_value: '10 juin 2002', about_address_label: 'Adresse :', about_address_value: 'Boumhal Ben Arous', about_zip_label: 'Code postal :', about_zip_value: '1000', about_email_label: 'Email :', about_phone_label: 'Téléphone :', about_projects: 'Projets terminés', about_cv: 'Télécharger le CV',
+          resume_big: 'CV', resume_title: 'CV', resume_education_tag: 'Formation', resume_education_date: '2024 → Aujourd’hui', resume_education_title: 'Étudiant en ingénierie', resume_education_place: 'Esprit School of Engineering', resume_education_desc: 'Études en ingénierie avec intérêt pour les systèmes numériques, le développement logiciel et les technologies appliquées.',
+          resume_academic_tag: 'Scolaire', resume_academic_date: '2021 → 2022', resume_academic_title: 'Baccalauréat', resume_academic_place: 'Lycée Essalem Boumhel City', resume_academic_desc: 'Obtention d’un bon niveau académique et d’une base solide pour des études supérieures.',
+          resume_intern_tag: 'Stage', resume_intern_date: '06/2023 → 09/2023', resume_intern_title: 'Stage administratif', resume_intern_place: 'GAT Assurances', resume_intern_desc: 'Soutien aux tâches administratives, coordination client et reporting dans un environnement professionnel.',
+          resume_pfe1_tag: 'PFE', resume_pfe1_date: '2025 · 6 mois', resume_pfe1_title: 'Projet de site e-commerce', resume_pfe1_place: 'Développement storefront responsive', resume_pfe1_desc: 'Création et amélioration d’un site e-commerce responsive avec parcours produit, interface soignée et développement prêt au déploiement.',
+          resume_pfe2_tag: 'PFE', resume_pfe2_date: '2025 · 6 mois', resume_pfe2_title: 'Projet ERP Dolibarr', resume_pfe2_place: 'Workflow métier et gestion des données', resume_pfe2_desc: 'Contribution à un projet ERP Dolibarr pour améliorer les flux métiers, la documentation et la gestion des processus.',
+          resume_support_tag: 'Expérience', resume_support_date: '2021 → 2025', resume_support_title: 'Support client', resume_support_place: 'Centre jeunesse de Boumhal', resume_support_desc: 'Gestion des demandes, accompagnement des utilisateurs et amélioration de la communication et de la résolution de problèmes.',
+          resume_cert_tag: 'Certification', resume_cert_date: '2026', resume_cert_title: 'Scrum Fundamentals Certified', resume_cert_place: 'ScrumStudy', resume_cert_desc: 'Certification sur les principes Agile, les rôles Scrum, les événements et la livraison efficace des projets.',
+          services_big: 'Services', services_title: 'Services', service_mobile_title: 'Design d’applications', service_mobile_text: 'Interfaces créatives pour l’art, la galerie et les expériences digitales.', service_network_title: 'Architecture réseau', service_network_text: 'Systèmes distribués, virtualisation, NFS, surveillance et déploiement MySQL.', service_3d_title: 'Expériences web 3D', service_3d_text: 'Écosystèmes immersifs et concepts de ville intelligente via des interfaces web modernes.', service_scrum_title: 'Scrum & Agile', service_scrum_text: 'Compréhension certifiée des fondamentaux Scrum pour la planification, la collaboration et la livraison.', service_collab_title: 'Collaboration', service_collab_text: 'Livraison orientée équipe, documentation claire, communication et support projet.', service_stack_title: 'Portfolio full-stack', service_stack_text: 'Travaux HTML, Java, PHP et interfaces web sur des projets scolaires, personnels et professionnels.',
+          skills_big: 'Compétences', skills_title: 'Mes compétences', skills_text: 'Présentation de mon expertise en technologies de développement web',
+          projects_big: 'Projets', projects_title: 'Projets GitHub en vedette', projects_text: 'Une vitrine soignée de mes meilleurs dépôts HTML, Java et PHP.',
+          contact_big: 'Contact', contact_title: 'Contactez-moi', contact_address_label: 'Adresse', contact_address_value: 'Boumhal Ben Arous', contact_phone_label: 'Numéro de contact', contact_email_label: 'Adresse email', contact_site_label: 'Site web', contact_form_name: 'Votre nom', contact_form_email: 'Votre email', contact_form_subject: 'Sujet', contact_form_message: 'Message', contact_form_send: 'Envoyer le message'
+        },
+        ar: {
+          nav_home: 'الرئيسية', nav_about: 'نبذة', nav_resume: 'السيرة', nav_services: 'الخدمات', nav_skills: 'المهارات', nav_projects: 'المشاريع', nav_blog: 'المدونة', nav_contact: 'اتصل بي',
+          hero_greet: 'مرحبًا، أنا', hero_name: 'خليل فكي', hero_tag: 'طالب هندسة • مطور ويب وتطبيقات • مبتكر في حل المشكلات',
+          hero_path: 'مسار الهندسة', hero_title: 'أدرس الهندسة في Esprit School of Engineering', hero_text: 'أبني مشاريع حديثة، أتعلم بسرعة وأحوّل الأفكار إلى تجارب رقمية ملموسة.',
+          about_big: 'نبذة', about_title: 'نبذة عني', about_name_label: 'الاسم:', about_name_value: 'خليل فكي', about_birth_label: 'تاريخ الميلاد:', about_birth_value: '10 يونيو 2002', about_address_label: 'العنوان:', about_address_value: 'بومال بن عروس', about_zip_label: 'الرمز البريدي:', about_zip_value: '1000', about_email_label: 'البريد:', about_phone_label: 'الهاتف:', about_projects: 'مشروع مكتمل', about_cv: 'تنزيل السيرة الذاتية',
+          resume_big: 'السيرة', resume_title: 'السيرة', resume_education_tag: 'تعليم', resume_education_date: '2024 → الآن', resume_education_title: 'طالب هندسة', resume_education_place: 'Esprit School of Engineering', resume_education_desc: 'أدرس الهندسة مع اهتمام بالأنظمة الرقمية وتطوير البرمجيات والتقنيات التطبيقية.',
+          resume_academic_tag: 'أكاديمي', resume_academic_date: '2021 → 2022', resume_academic_title: 'شهادة الثانوية', resume_academic_place: 'مدرسة عصلم بومهل ستي', resume_academic_desc: 'أكملت مشواري الأكاديمي بمستوى قوي و قاعدة جيدة لمواصلة الدراسة.',
+          resume_intern_tag: 'تدريب', resume_intern_date: '06/2023 → 09/2023', resume_intern_title: 'تدريب إداري', resume_intern_place: 'GAT Assurances', resume_intern_desc: 'دعم المهام الإدارية وتنسيق العملاء والتقارير في بيئة مهنية.',
+          resume_pfe1_tag: 'مشروع التخرج', resume_pfe1_date: '2025 · 6 أشهر', resume_pfe1_title: 'مشروع متجر إلكتروني', resume_pfe1_place: 'تطوير واجهة متجاوبة', resume_pfe1_desc: 'بناء وتحسين متجر إلكتروني متجاوب مع تدفق المنتجات، واجهة مصقولة وجاهز للنشر.',
+          resume_pfe2_tag: 'مشروع التخرج', resume_pfe2_date: '2025 · 6 أشهر', resume_pfe2_title: 'مشروع ERP Dolibarr', resume_pfe2_place: 'إدارة سير العمل والبيانات', resume_pfe2_desc: 'مساهمة في مشروع ERP Dolibarr لتحسين سير العمل والوثائق وإدارة العمليات.',
+          resume_support_tag: 'خبرة', resume_support_date: '2021 → 2025', resume_support_title: 'دعم العملاء', resume_support_place: 'مركز الشباب بومال', resume_support_desc: 'التعامل مع الاستفسارات ودعم المستخدمين وتحسين التواصل وحل المشكلات.',
+          resume_cert_tag: 'شهادة', resume_cert_date: '2026', resume_cert_title: 'Scrum Fundamentals Certified', resume_cert_place: 'ScrumStudy', resume_cert_desc: 'شهادة في مبادئ Agile وأدوار Scrum والأحداث وطرق تسليم المشاريع بشكل فعّال.',
+          services_big: 'الخدمات', services_title: 'الخدمات', service_mobile_title: 'تصميم تطبيقات الهاتف', service_mobile_text: 'واجهات إبداعية للفن والمعارض والتجارب الرقمية.', service_network_title: 'بنية الشبكة', service_network_text: 'أنظمة موزعة، محاكاة افتراضية، NFS، مراقبة ونشر MySQL.', service_3d_title: 'تجارب ويب ثلاثية الأبعاد', service_3d_text: 'بيئات غامرة ومفاهيم مدينة ذكية عبر واجهات ويب حديثة.', service_scrum_title: 'Scrum & Agile', service_scrum_text: 'فهم معتمد لمبادئ Scrum في التخطيط والتعاون والتسليم.', service_collab_title: 'التعاون', service_collab_text: 'تسليم قائم على الفريق مع توثيق واضح وتواصل ودعم المشاريع.', service_stack_title: 'حافظة Full-Stack', service_stack_text: 'أعمال HTML وJava وPHP وواجهات ويب لمشاريع مدرسية وشخصية ومهنية.',
+          skills_big: 'المهارات', skills_title: 'مهاراتي', skills_text: 'عرض خبرتي في تقنيات تطوير الويب',
+          projects_big: 'المشاريع', projects_title: 'مشاريع GitHub المميزة', projects_text: 'معرض مصقول لأفضل مستودعاتي في HTML وJava وPHP.',
+          contact_big: 'اتصل بي', contact_title: 'تواصل معي', contact_address_label: 'العنوان', contact_address_value: 'بومال بن عروس', contact_phone_label: 'رقم التواصل', contact_email_label: 'البريد الإلكتروني', contact_site_label: 'الموقع', contact_form_name: 'اسمك', contact_form_email: 'بريدك الإلكتروني', contact_form_subject: 'الموضوع', contact_form_message: 'الرسالة', contact_form_send: 'إرسال الرسالة'
+        }
+      };
+      const langButtons = document.querySelectorAll('.lang-btn');
+      const elements = document.querySelectorAll('[data-i18n]');
+      const navLinks = document.querySelectorAll('.nav-link span');
+      function applyLanguage(lang) {
+        const dict = translations[lang] || translations.en;
+        elements.forEach(function (el) {
+          const key = el.getAttribute('data-i18n');
+          if (!dict[key]) return;
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.setAttribute('placeholder', dict[key]);
+          } else {
+            el.textContent = dict[key];
+          }
+        });
+        navLinks.forEach(function (el, index) {
+          const labels = ['nav_home','nav_about','nav_resume','nav_services','nav_skills','nav_projects','nav_blog','nav_contact'];
+          if (dict[labels[index]]) el.textContent = dict[labels[index]];
+        });
+        langButtons.forEach(function (btn) { btn.classList.toggle('active', btn.getAttribute('data-lang') === lang); });
+        document.documentElement.lang = lang === 'ar' ? 'ar' : (lang === 'fr' ? 'fr' : 'en');
+      }
+      const savedLang = localStorage.getItem('portfolio-lang') || 'en';
+      applyLanguage(savedLang);
+      langButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const lang = btn.getAttribute('data-lang');
+          localStorage.setItem('portfolio-lang', lang);
+          applyLanguage(lang);
+        });
+      });
+    })();
+  </script>
     
   </body>
 </html>
