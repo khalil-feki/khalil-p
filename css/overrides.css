@@ -94,6 +94,23 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
   .resume-wrap { display: none !important; }
 }
 
+/* Completely hide hero/slider content on small phones so About appears first */
+@media (max-width: 767.98px) {
+  /* hide the carousel / hero wrapper */
+  .home-slider, .owl-carousel.home-slider, .hero-wrap, .slider-item, .slider-text, .hero-shell, .one-third, .one-forth {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* remove any top spacer so next section sits at top */
+  section:first-of-type { padding-top: 0 !important; }
+}
+
 /* Mobile touch: allow vertical scrolling when touching hero/cards */
 @media (max-width: 767.98px) {
   .owl-carousel.home-slider,
