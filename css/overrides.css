@@ -88,6 +88,26 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
   .slider-text h1 { font-size: 2.1rem !important; line-height: 1.15 !important; }
 }
 
+/* Mobile touch: allow vertical scrolling when touching hero/cards */
+@media (max-width: 767.98px) {
+  .owl-carousel.home-slider,
+  .owl-carousel.home-slider .owl-stage,
+  .owl-carousel.home-slider .slider-item,
+  .slider-text,
+  .hero-shell {
+    touch-action: pan-y !important;
+    -ms-touch-action: pan-y !important;
+    -webkit-user-drag: none !important;
+    -webkit-user-select: none !important;
+  }
+
+  /* keep links/buttons interactive */
+  .hero-shell a, .hero-shell button { touch-action: manipulation !important; -webkit-user-select: auto !important; }
+
+  /* ensure overlays don't trap touch events */
+  .home-slider .slider-item > .overlay { pointer-events: none !important; }
+}
+
 /* Broad, conservative text fixes (safe overrides) */
 .home-slider .slider-item .text,
 .slider-text *,
