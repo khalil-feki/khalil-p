@@ -111,6 +111,29 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
   section:first-of-type { padding-top: 0 !important; }
 }
 
+/* Final catch-all: remove any background-image inline or .img elements on small screens */
+@media (max-width: 767.98px) {
+  /* remove any inline background images anywhere */
+  [style*="background-image"] {
+    background-image: none !important;
+    background: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* generic .img helper class used across template */
+  .img, .img.d-flex, .img-fluid, .img-about, .img img {
+    display: none !important;
+    background: none !important;
+    visibility: hidden !important;
+  }
+}
+
 /* Extra: remove inline/background images inside hero on mobile */
 @media (max-width: 767.98px) {
   .home-slider [style*="background-image"],
