@@ -1,0 +1,88 @@
+/* Overrides: hero animation, spacing, services hover, resume animation, theme enforcement */
+.home-slider .slider-item > .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 400px at 10% 20%, rgba(var(--accent-rgb),0.12), transparent 12%),
+    radial-gradient(500px 360px at 90% 80%, rgba(var(--accent-2-rgb),0.10), transparent 18%);
+  filter: blur(36px);
+  opacity: 0.95;
+  will-change: transform, opacity;
+  animation: hero-bg-move 12s linear infinite;
+}
+
+@keyframes hero-bg-move {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  25% { transform: translate3d(8px,-6px,0) scale(1.02); }
+  50% { transform: translate3d(0,-4px,0) scale(1.01); }
+  75% { transform: translate3d(-6px,6px,0) scale(1.02); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+.text.hero-shell { position: relative; z-index: 3; max-width: 720px; padding: 0.9rem 1.05rem; border-radius: 20px; }
+
+@media (min-width: 768px) { .slider-text .hero-shell { margin-top: 64px; } }
+@media (max-width: 767px) { .slider-text .hero-shell { margin-top: 18px; } }
+
+.hero-pills span { background: rgba(var(--text-rgb),0.06); color: var(--muted); }
+
+.services-1 { display: block; padding: 1.15rem; border-radius: 16px; text-decoration: none; color: inherit; transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms ease, background 280ms ease; background: linear-gradient(180deg, transparent 0%, rgba(var(--text-rgb),0.02) 100%); }
+.services-1 .icon { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 999px; background: rgba(var(--accent-rgb),0.06); color: rgb(var(--accent-rgb)); font-size: 1.6rem; transition: background 200ms ease, color 200ms ease, transform 200ms ease; }
+.services-1 .desc h3 { color: var(--text); }
+.services-1:hover { transform: translateY(-10px); box-shadow: 0 26px 48px rgba(0,0,0,0.14); background: linear-gradient(135deg, rgba(var(--accent-rgb),0.10), rgba(var(--accent-2-rgb),0.04)); }
+.services-1:hover .icon { background: rgba(var(--accent-rgb),0.96); color: var(--text); transform: scale(1.06); }
+.services-1 .desc p { color: var(--muted); }
+
+@keyframes resume-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.resume-card { transition: transform 220ms ease, box-shadow 220ms ease; background: linear-gradient(180deg, rgba(var(--text-rgb),0.03), rgba(var(--text-rgb),0.01)); }
+.resume-card.ftco-animate { animation: resume-up 560ms cubic-bezier(.2,.8,.2,1) both; visibility: visible !important; }
+.resume-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+
+/* Stronger card contrast and border for readability */
+.resume-wrap {
+  background: linear-gradient(160deg, rgba(var(--text-rgb),0.04), rgba(var(--text-rgb),0.02)) !important;
+  border: 1px solid rgba(var(--text-rgb),0.08) !important;
+  box-shadow: 0 18px 36px rgba(2,6,23,0.14) !important;
+  position: relative !important;
+  z-index: 6 !important;
+}
+.resume-wrap .resume-tag {
+  background: rgba(var(--accent-rgb),0.14) !important;
+  color: var(--accent) !important;
+}
+.resume-wrap .date {
+  color: var(--accent) !important;
+}
+.resume-wrap p { color: var(--text) !important; opacity: 0.98 !important; }
+
+/* Conservative theme text enforcement */
+body, p, li, span, small, h1, h2, h3, h4, h5, h6, a, .services-1 .desc h3, .resume-wrap, .project-card .text { color: var(--text) !important; }
+
+/* Make contact links visible */
+a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !important; }
+
+/* Ensure two resume cards per row on small widths */
+@media (max-width: 767px) { .resume-grid > .col-md-6 { flex: 0 0 50%; max-width: 50%; } }
+
+/* Broad, conservative text fixes (safe overrides) */
+.home-slider .slider-item .text,
+.slider-text *,
+.hero *,
+.resume-wrap *,
+.resume-card *,
+.ftco-footer *,
+.project .text *,
+.contact-section * {
+  color: var(--text) !important;
+}
+
+/* Links inside those regions use muted color for contrast */
+.home-slider .slider-item .text a,
+.resume-wrap a,
+.ftco-footer a,
+.project .text a,
+.contact-section a {
+  color: var(--muted) !important;
+}
