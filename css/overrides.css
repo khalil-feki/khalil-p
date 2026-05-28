@@ -1,4 +1,24 @@
 /* Overrides: hero animation, spacing, services hover, resume animation, theme enforcement */
+.prevent-horizontal-scroll {
+  /* helper class — not used directly */
+}
+/* Prevent horizontal scroll caused by overflowing hero/carousel elements */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* Ensure hero/slider elements don't exceed viewport width */
+.home-slider, .owl-carousel, .slider-item, .slider-text, .one-third, .one-forth {
+  box-sizing: border-box !important;
+  max-width: 100vw !important;
+}
+
+/* Ensure images/backgrounds don't create overflow */
+img, .img, .img-about, .project-card, .one-third {
+  max-width: 100% !important;
+  height: auto !important;
+}
 .home-slider .slider-item > .overlay {
   position: absolute;
   inset: 0;
@@ -8,7 +28,7 @@
     radial-gradient(600px 400px at 10% 20%, rgba(var(--accent-rgb),0.12), transparent 12%),
     radial-gradient(500px 360px at 90% 80%, rgba(var(--accent-2-rgb),0.10), transparent 18%);
   filter: blur(36px);
-  opacity: 0.95;
+  opacity: 0.18;
   will-change: transform, opacity;
   animation: hero-bg-move 12s linear infinite;
 }
@@ -78,8 +98,8 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
     padding-bottom: 1.5rem !important;
   }
 
-  /* hide the decorative hero shell/card on small screens to reduce clutter */
-  .hero-shell { display: none !important; }
+  /* ensure the decorative hero shell/card remains visible on small screens */
+  .hero-shell { display: block !important; visibility: visible !important; }
 
   /* make resume cards stack one-per-row on phones (less crowded) */
   .resume-grid > .col-md-6 { flex: 0 0 100% !important; max-width: 100% !important; }
@@ -88,63 +108,18 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
   .slider-text h1 { font-size: 2.1rem !important; line-height: 1.15 !important; }
 }
 
-/* Hide decorative pills and resume cards on small screens to reduce clutter */
+/* Mobile adjustments: keep hero visible; avoid aggressive overrides so layout follows desktop rules */
 @media (max-width: 767.98px) {
-  .hero-pills { display: none !important; }
-  .resume-wrap { display: none !important; }
-}
+  /* make overlays very subtle on phones so background images remain visible */
+  .home-slider .slider-item > .overlay { opacity: 0.12 !important; }
+  /* Ensure hero text/card is visible and not hidden */
+  .hero-shell { display: block !important; visibility: visible !important; }
 
-/* Completely hide hero/slider content on small phones so About appears first */
-@media (max-width: 767.98px) {
-  /* hide the carousel / hero wrapper */
-  .home-slider, .owl-carousel.home-slider, .hero-wrap, .slider-item, .slider-text, .hero-shell, .one-third, .one-forth {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-  }
+  /* Let `css/style.css` control stacking of `.one-third` and `.one-forth` — only tweak small font sizes */
+  .slider-text h1 { font-size: 2rem !important; line-height: 1.08 !important; }
 
-  /* remove any top spacer so next section sits at top */
-  section:first-of-type { padding-top: 0 !important; }
-}
-
-/* Final catch-all: remove any background-image inline or .img elements on small screens */
-@media (max-width: 767.98px) {
-  /* remove any inline background images anywhere */
-  [style*="background-image"] {
-    background-image: none !important;
-    background: none !important;
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* generic .img helper class used across template */
-  .img, .img.d-flex, .img-fluid, .img-about, .img img {
-    display: none !important;
-    background: none !important;
-    visibility: hidden !important;
-  }
-}
-
-/* Extra: remove inline/background images inside hero on mobile */
-@media (max-width: 767.98px) {
-  .home-slider [style*="background-image"],
-  .home-slider .img,
-  .img-about .img,
-  .one-third.img,
-  .hero-wrap[style*="background-image"] {
-    background-image: none !important;
-    background: none !important;
-    display: none !important;
-  }
+  /* Slightly reduce top spacing so the following section is closer */
+  section:first-of-type { padding-top: 0.75rem !important; }
 }
 
 /* Mobile touch: allow vertical scrolling when touching hero/cards */
@@ -186,4 +161,83 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
 .project .text a,
 .contact-section a {
   color: var(--muted) !important;
+}
+
+/* Show hero background images only on desktop; hide them on small screens (phones) */
+@media (max-width: 767.98px) {
+  /* remove decorative background image block on phones to avoid blocking scroll and reduce clutter */
+  .one-third.js-fullheight, .one-third.img, .one-third {
+    background-image: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+  }
+
+  /* make the text column take full width on phones */
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth,
+  .one-forth.d-flex { width: 100% !important; max-width: 100% !important; }
+}
+
+@media (min-width: 768px) {
+  /* ensure hero images visible on desktop */
+  .one-third.js-fullheight, .one-third.img, .one-third {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    min-height: 380px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+}
+
+/* Desktop: place hero image next to the card and make it smaller */
+@media (min-width: 992px) {
+  .owl-carousel.home-slider .slider-item .slider-text {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.5rem;
+  }
+
+  .owl-carousel.home-slider .slider-item .slider-text .one-third {
+    flex: 0 0 36% !important;
+    max-width: 36% !important;
+    min-height: 320px !important;
+    order: 2 !important;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    margin: 0 !important;
+  }
+
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+    flex: 1 1 58% !important;
+    max-width: 58% !important;
+    order: 1 !important;
+  }
+
+  /* make sure the hero card content adapts inside the reduced text column */
+  .text.hero-shell { max-width: 100% !important; padding: 1rem !important; }
+}
+
+/* Override desktop absolute positioning so flex layout works reliably */
+@media (min-width: 992px) {
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth,
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth .text,
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth .text .hero-shell {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+    display: block !important;
+    width: 100% !important;
+  }
 }

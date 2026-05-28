@@ -84,6 +84,8 @@
 	
 
 	var carousel = function() {
+		// disable drag on small screens so vertical swipes scroll the page
+		var _enableDrag = $(window).width() > 767.98;
 		$('.home-slider').owlCarousel({
 	    loop:true,
 	    autoplay: true,
@@ -92,6 +94,8 @@
 	    animateIn: 'fadeIn',
 	    nav:false,
 	    autoplayHoverPause: false,
+	    touchDrag: _enableDrag,
+	    mouseDrag: _enableDrag,
 	    items: 1,
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
