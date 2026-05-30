@@ -241,3 +241,8 @@ a[href*="tel"], a[href*="mailto"], a[href*="github.com"] { color: var(--muted) !
     width: 100% !important;
   }
 }
+
+/* Fix: ensure hireme section is above page content and buttons are clickable */
+.ftco-hireme { z-index: 0 !important; position: relative !important; }
+.ftco-hireme .btn { pointer-events: auto !important; }
+
